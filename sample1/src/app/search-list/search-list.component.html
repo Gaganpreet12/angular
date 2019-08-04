@@ -1,0 +1,31 @@
+
+
+
+<form #searchForm="ngForm" (ngSubmit)="search(searchForm.value)">
+    Id: <input type="text" [(ngModel)]="this.id" name="id" ngModel>
+    <input type="submit" value="Submit">
+   </form>
+    
+   <table border="1">
+    <tr>
+    <th>Id</th> <th>Name</th> <th>Phone</th>
+    </tr>
+    <tr *ngFor="let e of emp">
+    <td>{{e.id}}</td>
+    <td>{{e.name}}</td>
+    <td>{{e.phone}}</td>
+    </tr>
+   </table>
+
+   <!-- <div *ngIf = isSearch>
+    <form #src="ngForm" (ngSubmit)="search(src.value)">
+            <table>
+                    <tr>
+                      
+                      <td><label>Enter the ID : </label></td><td> <input type="text" name="id" ngModel></td></tr> 
+                      <tr><td> <input type="submit" value="Search"></td></tr>
+            </table>
+                 
+    </form>   
+  
+  </div> -->

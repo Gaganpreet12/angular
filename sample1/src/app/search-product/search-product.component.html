@@ -1,0 +1,40 @@
+<h4>Product List</h4>
+<form>
+    <table border="1" >
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>PRICE</th>
+          <th>CATEGORY</th>
+          <th>OPERATIONS</th>
+        </tr>
+        <tr *ngFor="let data of detail">
+          <td>{{data.id}}</td>
+          <td>{{data.name}}</td>
+          <td>{{data.price}}</td>
+          <td>{{data.category}}</td>
+          <td>
+            <button type="submit" (click)="delete(data)">DELETE</button>|
+            <button type="submit" (click)="updateData(data)">UPDATE</button>
+          </td>
+        </tr>
+      </table>
+
+      
+</form>
+
+<div *ngIf = isUpdate>
+    <form #upd="ngForm" (ngSubmit)="update(upd.value)">
+            <table>
+                    <tr>
+                      
+                      <td><label>Enter the ID : </label></td><td> <input type="text" name="id" ngModel></td></tr> 
+                      <tr><td><label>Enter the NAME : </label></td><td><input type="text"  name="name" ngModel></td></tr>
+                      <tr><td><label>Enter the PRICE : </label></td><td> <input type="text"  name="price" ngModel></td></tr>
+                      <tr><td><label>Enter the CATEGORY : </label> </td><td><input type="text" name="category" ngModel></td></tr>
+                      <tr><td><input type="submit" value="Submit"></td></tr>
+            </table>
+                  
+    </form>   
+
+</div>

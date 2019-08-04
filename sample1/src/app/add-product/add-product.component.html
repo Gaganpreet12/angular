@@ -1,0 +1,11 @@
+
+
+<form #name="ngForm" (ngSubmit)="add(name.value)">
+    <table>
+        <tr><label>ID : </label><td><input type="text" name="id" ngModel></td></tr>
+        <tr><label>NAME : </label><td><input type="text" name="name" ngModel></td></tr>
+        <tr><label>PRICE : </label><td><input type="text" name="price" ngModel></td></tr>
+        <tr><label>CATEGORY :</label><td><input type="text" name="category" ngModel></td></tr>
+        <tr><input type="submit" value="Submit"></tr>
+</table>
+  </form>
